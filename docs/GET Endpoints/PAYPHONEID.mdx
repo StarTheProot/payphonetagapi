@@ -1,0 +1,45 @@
+### Payload
+Payload is given in the URL, after /PAYPHONEID.
+```
+?=player_id= Player ID - Number
+```
+
+### Response
+
+:::warning
+This endpoint provides more information then listed below. This will be fixed soon.
+:::
+
+```
+{
+"address": address of payphone - string,
+"cabinet_id": the cabinet ID of the payphone - string,
+"cabinet_name": the name of the cabinet - string,
+"cabinet_type": the type of the cabinet - string,
+"cabinet_width": the width of the cabinet, full or half - string,
+"can_report_fixed": Unknown - boolean,
+"cabinet_name": the name of the cabinet - string,
+"capture_log": [{player_id: number, player_name: string, player_emoji: string, player_shape: string}],
+"captured_at": time captured, time formatted in ISO 8601 - string,
+"captured_by": player ID who captured it - number,
+"first_captured_by": player ID who first captured the payphone - number,
+"first_captured_emoji": the emoji of the first player who captured it - string,
+"first_captured_name": name of the first player who captured it first - string,
+"id": id of player who currently holds the payphone - string
+"lat": number,
+"lng": number,
+"number": phone number of the payphone - number,
+"owner_color": hex code - string,
+"owner_emoji": emoji - string,
+"owner_name": string,
+"postcode": number,
+"report_summary": [{bucket: (Usually "telstra") - string, confirm_count: number, count: number, dispute_count: number, label: string, symptom: string, telstra_reported: boolean, viewer_tap, string}],
+},
+"reports": [{category: string, created_at: string, id: number, player_emoji: string, player_name: string}],
+},
+"state": state payphone is in (eg. NSW) - string,
+"status": status payphone is in (eg. Active) - string,
+```
+
+### Response Format
+JSON

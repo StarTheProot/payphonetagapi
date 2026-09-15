@@ -1,0 +1,47 @@
+### Payload
+None
+
+### Response
+
+:::info
+This endpoint is formatted in a better way, we are working on making all endpoints formatted like this one.
+:::
+
+```
+{"cells":
+  {int:   (Cell ID)
+    {"color": str,  (Hex colour)
+     "name": str,
+     "tag": str
+    }
+  },
+ "payphones":
+  [
+    [int (PayphoneID),
+     float (longitude),
+     float (latitude),
+     int (ID of the Agent that currently holds the phone),
+     str (Phone status, ["active", "inoperable", "excluded"]),
+     str (Last captured timestamp, mix of `yyyy-mm-dd hh-mm-ss` and `yyyy-mm-ddThh-mm-ssZ`),
+     int (tty status, boolean behaviour 0,1),
+     int (first capture, boolean behaviour 0,1)
+    ]
+   ],
+  "players":
+    {int:    (AgentID)
+      {"color": str, (AgentColour in HEX)
+       "emoji": str,
+       "name": str,
+       "shape": str,
+       "cellId": int   (optional) 
+      }
+    },
+  "reported":
+    [int  (Reported Payphone ID)
+    ],
+  "version": int
+}
+```
+
+### Response Format
+JSON
